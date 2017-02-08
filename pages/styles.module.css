@@ -1,0 +1,44 @@
+@import '../assets/css/variables.css';
+
+.page {
+  padding-top: var(--headerHeight);
+  min-height: 100vh;
+}
+
+.intro {
+  background: url('assets/img/background-min.jpg');
+  background-size: cover;
+  color: var(--colorWhite);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.intro h1 {
+  font-size: 2.95rem;
+  text-align: center;
+  position: absolute;
+  top: 25vh;
+  left: 20vh;
+  right: 20vh;
+  bottom: 40vh;
+}
+
+.particles {
+  position: absolute;
+  top: 25vh;
+  left: 20vh;
+  right: 20vh;
+  bottom: 40vh;
+}
+
+.link {
+  border-bottom: 2px solid var(--colorWhite);
+}
+
+@media (--small) {
+  .intro h1 {
+    font-size: 1.142rem;
+  }
+  .link {
+    border-width: 1px;
+  }
+}

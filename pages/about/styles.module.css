@@ -1,0 +1,25 @@
+@import '../../assets/css/variables.css';
+
+.intro {
+  width: calc(6 / var(--columnCount) * 100%);
+  padding-right: var(--gutter);
+  padding-bottom: 50px;
+  font-size: 1.025rem;
+  line-height: 1.7;
+  bottom: 30px;
+}
+
+@media (--medium) {
+  .intro {
+    width: calc(10 / var(--columnCount) * 100%);
+  }
+}
+
+@media (--small) {
+  .intro {
+    width: calc(12 / var(--columnCount) * 100%);
+    padding-right: 0;
+    font-size: 1.1428rem;
+  }
+}
+

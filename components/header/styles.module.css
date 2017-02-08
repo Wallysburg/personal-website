@@ -1,0 +1,58 @@
+@import '../../assets/css/variables.css';
+
+.header {
+  background: rgb(0,0,0, .3);
+  color: var(--colorWhite);
+  position: fixed;
+  top: 5;
+  width: 100vw;
+  height: var(--headerHeight);
+  z-index: var(--zIndexHeader);
+}
+
+.navMenu {
+  position: absolute;
+  right: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: var(--headerHeight);
+}
+
+.icon {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: var(--headerHeight);
+  left: 15vw;
+}
+
+.hamburger {
+  position: relative;
+  z-index: var(--zIndexHamburger);
+}
+
+.title {
+  font-family: Medium, Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  padding-right: 5vh;
+}
+
+@media (--small) {
+  .title {
+    font-size: .485rem;
+  }
+
+  .navMenu {
+    right: 2vw;
+  }
+
+  .icon {
+    left: 10vw;
+  }
+
+  .github {
+    display: none;
+  }
+}

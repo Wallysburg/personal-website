@@ -1,0 +1,35 @@
+@import '../../assets/css/variables.css';
+
+.menu {
+  background: rgb(0,0,0,0.6);
+  color: var(--colorWhite);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--zIndexMenu);
+  width: 35vh;
+}
+
+.disable {
+  composes: menu;
+  display: none;
+}
+
+.item {
+  font-family: Medium, Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  line-height: 2.1;
+}
+
+.active {
+  border-bottom: 4px solid var(--colorWhite);
+}
+
+@media (--small) {
+  .item {
+    font-size: 2.2857rem;
+  }
+  .active {
+    border-width: 2px;
+  }
+}

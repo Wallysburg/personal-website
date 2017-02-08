@@ -1,0 +1,15 @@
+{
+  "projects": [
+     {
+      "className": "prizmdoc",
+      "description": "A modern library/framework agnostic HTML5 Viewer & Imaging Suite",
+      "clientDescription":"PrizmDoc is a modern library/framework agnostic HTML5 Viewer & Imaging Suite. Designed to be supported on virtually any platform and language, the viewer is customizable and handles a wide range of document, raster, and vector file formats.",
+      "cta": {
+        "link": "https://www.accusoft.com/products/prizmdoc/overview/",
+        "text": "Check it out"
+      },
+      "slug": "chadstone",
+      "title": "PrizmDoc"
+    }
+  ]
+}
