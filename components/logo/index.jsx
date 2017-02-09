@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import icon from './img/icon2.png';
+import logo from './img/icon2.png';
+import styles from './styles.module.css';
 
 import 'react-github-button/assets/style.css';
 
-export default class Logo extends Component {
+const Logo = () => (<img className={styles.logo} src={logo} />);
 
-  render() {
-    return <img src={icon} />;
-  }
-}
-
+export default Logo;
 
