@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import Header from 'components/header';
+import HeadRoom from 'react-headroom';
 
 import styles from './styles.module.css';
 import 'assets/css/reset.css';
