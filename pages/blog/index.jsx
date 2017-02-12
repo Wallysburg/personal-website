@@ -6,11 +6,12 @@ import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
 import access from 'safe-access';
 
+import Logo from 'components/logo';
 import ContentPage from 'components/content-page';
 import Wrapper from 'components/wrapper';
 
 function verifyPageIsBlogPostMarkdown(page) {
-  return (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'post')
+  return (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'post');
 }
 
 class Blog extends React.Component {
@@ -26,18 +27,24 @@ class Blog extends React.Component {
         const description = access(page, 'data.description');
         const datePublished = access(page, 'data.date');
         const category = access(page, 'data.category');
-
+        const author = access(page, 'data.author');
         pageLinks.push(
-          <div className="blog-post">
+          <div className="blog-post" key={datePublished}>
             <time dateTime={moment(datePublished).format('MMMM D, YYYY')}>
               { moment(datePublished).format('MMMM YYYY') }
             </time>
-            <span style={{ padding: '5px' }} />
+            <span style={{ padding: '8px' }} />
             <span className="blog-category">{ category }</span>
             <h2>
               <Link style={{ borderBottom: 'none' }} to={prefixLink(page.path)} > { title } </Link>
             </h2>
             <p dangerouslySetInnerHTML={{ __html: description }} />
+            <div>
+              <Logo style={{ marginBottom: '-4px' }} height={20} width={20} />
+              <span style={{ padding: '8px' }} />
+              <span> By {author} </span>
+            </div>
+            <br />
             <Link className="readmore" to={prefixLink(page.path)}> Read</Link>
           </div>
         );

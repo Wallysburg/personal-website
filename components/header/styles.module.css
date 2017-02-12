@@ -3,7 +3,6 @@
 .header {
   background: rgb(0,0,0, .3);
   color: var(--colorWhite);
-  position: fixed;
   top: 5;
   width: 100vw;
   height: var(--headerHeight);
@@ -25,7 +24,9 @@
   display: flex;
   align-items: center;
   height: var(--headerHeight);
-  left: 15vw;
+  left: 12vw;
+  top: 4px;
+
 }
 
 .hamburger {

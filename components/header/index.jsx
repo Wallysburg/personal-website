@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { prefixLink } from 'gatsby-helpers';
 
+import Headroom from 'react-headroom';
 import Logo from 'components/Logo';
 import Wrapper from 'components/wrapper';
 
 import { IndexLink, Link } from 'react-router';
 
 import styles from './styles.module.css';
-import 'react-github-button/assets/style.css';
 
 export default class Header extends Component {
   render() {
     return (
+      <Headroom wrapperStyle={{ position: 'fixed' }}>
       <div className={styles.header}>
         <Wrapper>
           <div className={styles.navMenu}>
@@ -30,11 +31,13 @@ export default class Header extends Component {
           </div>
           <div className={styles.icon}>
             <IndexLink to={prefixLink('/')}>
-              <Logo />
+              <Logo height={40} width={40} />
             </IndexLink>
           </div>
         </Wrapper>
       </div>
+      </Headroom>
+
     );
   }
 }

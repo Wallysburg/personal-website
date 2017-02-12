@@ -13,7 +13,7 @@ class SitePost extends React.Component {
     const home = (
       <div>
         <Link className="gohome" to={prefixLink('/blog/')}> All Articles
-          </Link>
+      </Link>
       </div>
         );
 

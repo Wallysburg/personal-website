@@ -1,12 +1,75 @@
 @import '../../assets/css/variables.css';
 
-.intro {
-  width: calc(6 / var(--columnCount) * 100%);
+.about {
   padding-right: var(--gutter);
-  padding-bottom: 50px;
+  padding-bottom: 64px;
   font-size: 1.025rem;
-  line-height: 1.7;
-  bottom: 30px;
+  bottom: 32px;
+}
+
+
+.about p {
+  width: 50%;
+}
+
+.about h2 {
+  text-align: center;
+}
+
+.skillSummary {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+ .skillItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  min-width: 200px;
+  max-width: 248px;
+  margin-bottom: 24px;
+}
+
+.icon {
+  display: inline-block;
+  height: 48px;
+  margin: 0 auto 15px;
+  width: 48px;  
+}
+
+.name {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.details {
+  font-size: 16px;
+  padding: 0 8px;
+}
+
+.technicalSkills {
+  padding-right: var(--gutter);
+  padding-bottom: 48px;
+  font-size: 1.025rem;
+  bottom: 32px;
+}
+
+.technicalSkills p {
+  width: 50%;
+}
+
+.technicalSkills h2 {
+  text-align: center;
 }
 
 @media (--medium) {

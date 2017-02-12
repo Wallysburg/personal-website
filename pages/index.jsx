@@ -31,14 +31,13 @@ export default class Index extends Component {
               }}
             />
             <h1>
-              Hi. I’m Charlie.
-              <br />
-              <br />
-              I’m a web developer.
-              <br />
-              <br />
-              Check out my <Link className={styles.link} to={prefixLink('/work/')}>work</Link>.
+              Charlie Davis
             </h1>
+              <br />
+              <br />
+            <h2>
+              <Link className={styles.link} to={prefixLink('/work/')}>Web Application Developer</Link>
+            </h2>
           </Wrapper>
         </Fullscreen>
       </div>
