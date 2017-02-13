@@ -28,6 +28,6 @@
 }
 
 .prizmdoc {
-  composes: chadstone from "../themes.module.css";
+  composes: prizmdoc from "../themes.module.css";
   composes: page;
 }

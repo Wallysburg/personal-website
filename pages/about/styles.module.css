@@ -1,29 +1,41 @@
 @import '../../assets/css/variables.css';
 
+h2 {
+  text-align: center;
+}
+
 .about {
+  color: white;
+  background-color:rgb(0,0,0, 0.4);
+  padding-top: 32px;
   padding-right: var(--gutter);
   padding-bottom: 64px;
   font-size: 1.025rem;
   bottom: 32px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
 }
 
-
-.about p {
+.aboutText {
   width: 50%;
-}
-
-.about h2 {
   text-align: center;
+  align-content: center;
 }
 
 .skillSummary {
+    border-radius: 50%;
+
+  color: white;
+  background-color:rgb(0,0,0, 0.4);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 24px;
 }
 
  .skillItem {
+  justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

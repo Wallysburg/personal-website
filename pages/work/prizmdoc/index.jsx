@@ -58,9 +58,9 @@ const mobileImages = [
 ];
 
 
-export default class Chadstone extends Component {
+export default class PrizmDoc extends Component {
   render() {
-    const project = projects.find(_project => _project.slug === 'chadstone');
+    const project = projects.find(_project => _project.slug === 'prizmdoc');
 
     const image = (
       <img src={coverImage} alt="Cover" />
