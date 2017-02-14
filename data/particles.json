@@ -1,0 +1,11 @@
+{
+  "particles": {
+    "line_linked": {
+      "shadow": {
+        "enable": true,
+        "color": "#000",
+        "blur": 5
+      }
+    }
+  }
+}

@@ -35,11 +35,8 @@
 }
 
 .particles {
-  position: absolute;
-  top: 25vh;
-  left: 20vh;
-  right: 20vh;
-  bottom: 40vh;
+  position: fixed;
+  height: 100vh;
 }
 
 .link {

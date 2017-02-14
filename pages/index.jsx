@@ -4,10 +4,10 @@ import Particles from 'react-particles-js';
 
 import Fullscreen from 'components/fullscreen';
 import Meta from 'components/meta';
-import Wrapper from 'components/wrapper';
 import { Link } from 'react-router';
 
 import styles from './styles.module.css';
+import { particlesConfig } from 'data/particles.json';
 
 export default class Index extends Component {
   render() {
@@ -15,30 +15,16 @@ export default class Index extends Component {
       <div>
         <Meta />
         <Fullscreen className={styles.intro} firstItem>
-          <Wrapper>
-            <Particles
-              className={styles.particles}
-              params={{
-                particles: {
-                  line_linked: {
-                    shadow: {
-                      enable: true,
-                      color: '#000',
-                      blur: 5,
-                    },
-                  },
-                },
-              }}
-            />
-            <h1>
+          <Particles
+            className={styles.particles}
+            params={particlesConfig}
+          />
+          <h1>
               Charlie Davis
             </h1>
-              <br />
-              <br />
-            <h2>
-              <Link className={styles.link} to={prefixLink('/work/')}>Web Application Developer</Link>
-            </h2>
-          </Wrapper>
+          <h2>
+            <Link className={styles.link} to={prefixLink('/work/')}>Web Application Developer</Link>
+          </h2>
         </Fullscreen>
       </div>
     );

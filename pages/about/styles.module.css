@@ -14,7 +14,6 @@ h2 {
   bottom: 32px;
   display: flex;
   justify-content: center;
-  border-radius: 50%;
 }
 
 .aboutText {
@@ -24,8 +23,6 @@ h2 {
 }
 
 .skillSummary {
-    border-radius: 50%;
-
   color: white;
   background-color:rgb(0,0,0, 0.4);
   display: flex;
