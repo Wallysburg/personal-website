@@ -1,13 +1,18 @@
 @import '../../assets/css/variables.css';
 
+
+.pageSection {
+  padding-top: 64px;
+}
+
 h2 {
   text-align: center;
 }
 
-.about {
+.aboutContainer {
   color: white;
   background-color:rgb(0,0,0, 0.4);
-  padding-top: 32px;
+  padding-top: 64px;
   padding-right: var(--gutter);
   padding-bottom: 64px;
   font-size: 1.025rem;
