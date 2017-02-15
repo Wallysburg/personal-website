@@ -33,7 +33,32 @@ export default class About extends Component {
           <Wrapper className={styles.pageSection}>
             <section className={styles.technicalSkills}>
               <h2>Skills</h2>
-              <section className={styles.skillSummary}>
+              <section className={styles.aboutContainer}>
+                <div className={styles.skillItem}>
+                  <img src="img/developer.png" className={styles.icon} />
+                  <span className={styles.name}>Development</span>
+                  <span className={styles.details}>I build very cool web and mobile applications, using the best of the cutting edge technologies available out there.</span>
+                </div>
+                <div className={styles.skillItem}>
+                  <img src="img/developer.png" className={styles.icon} />
+                  <span className={styles.name}>Scrum Master</span>
+                  <span className={styles.details}>I build very cool web and mobile applications, using the best of the cutting edge technologies available out there.</span>
+                </div>
+                <div className={styles.skillItem}>
+                  <img src="img/developer.png" className={styles.icon} />
+                  <span className={styles.name}>Agile</span>
+                  <span className={styles.details}>I build very cool web and mobile applications, using the best of the cutting edge technologies available out there.</span>
+                </div>
+              </section>
+            </section>
+          </Wrapper>
+        </ContentPage>
+        <ContentPage className={styles.page}>
+          <Meta title="About" />
+          <Wrapper className={styles.pageSection}>
+            <section className={styles.technicalSkills}>
+              <h2>Skills</h2>
+              <section className={styles.aboutContainer}>
                 <div className={styles.skillItem}>
                   <img src="img/developer.png" className={styles.icon} />
                   <span className={styles.name}>Development</span>

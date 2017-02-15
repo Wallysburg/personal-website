@@ -1,6 +1,7 @@
 .blog-post {
 	margin-bottom: 30px;
 }
+
 .blog-post:last-child {
 	margin-bottom: 10px;
 }
@@ -72,20 +73,21 @@
 	font-size: 16px;
 	text-align: center;
 	padding: 8px 16px;
-	color: #999;
-	background: #f4f4f4;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background: rgb(0,0,0,0.15);
 	font-weight: 400;
 	border-radius: 3px;
 }
 
 .gohome:focus {
-	color: #444;
-	background: #f4f4f4;
+	background: rgb(0,0,0,0.35);
+
 	border: 0;
 }
 .gohome:hover {
-	color: #444;
-	background: #f4f4f4;
+	background: rgb(0,0,0,0.35);
+
 	border: 0;
 }
 @media (max-width:900px) {

@@ -8,6 +8,7 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .intro {
@@ -39,7 +40,6 @@
 
 .particles {
   position: fixed;
-  height: 100vh;
 }
 
 .link {

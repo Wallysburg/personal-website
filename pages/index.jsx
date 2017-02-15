@@ -14,18 +14,18 @@ export default class Index extends Component {
     return (
       <div>
         <Meta />
-        <Fullscreen className={styles.intro} firstItem>
+        <section className={styles.intro} firstItem>
+          <h1>
+              Charlie Davis
+          </h1>
+          <h2>
+            <Link className={styles.link} to={prefixLink('/work/')}>Web Application Developer</Link>
+          </h2>
           <Particles
             className={styles.particles}
             params={particlesConfig}
           />
-          <h1>
-              Charlie Davis
-            </h1>
-          <h2>
-            <Link className={styles.link} to={prefixLink('/work/')}>Web Application Developer</Link>
-          </h2>
-        </Fullscreen>
+        </section>
       </div>
     );
   }

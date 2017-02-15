@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import Header from 'components/header';
-
+// import Parallax from 'components/parallax'
 import styles from './styles.module.css';
 import 'assets/css/reset.css';
 import 'assets/css/document.css';
