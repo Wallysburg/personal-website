@@ -1,8 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-import Background from './components/background';
-import Content from './components/content';
-
 export default class Parallax extends Component {
 
   static propTypes = {
@@ -21,11 +18,14 @@ export default class Parallax extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.calcTranslation.bind(this), 10);
 
-    this.background.background.setAttribute('style', 'width: 100%; top: 0; bottom: 0; background-size: cover ;background-position: 50% 0; background-repeat: no-repeat;');
+    this.background.setAttribute('style', 'width: 100%; top: 0; bottom: 0; background-size: cover ;background-position: 50% 0; background-repeat: no-repeat;');
 
     Object.keys(this.state.backgroundStyle).forEach((key) => {
-      this.background.background.style[key] = this.state.backgroundStyle[key];
+      this.background.style[key] = this.state.backgroundStyle[key];
     });
+    this.content.style.position = 'absolute';
+    this.content.style.left = 0;
+    this.content.style.right = 0;
   }
 
   componenetWillUnmount() {
@@ -36,15 +36,17 @@ export default class Parallax extends Component {
     const translationValue = (window.scrollY / this.state.speedDivision > 0) ? (window.scrollY / this.state.speedDivision) : 0;
     const translateStyle = `translate3d(0px,${translationValue}px, 0px)`;
     if (this.background) {
-      this.background.background.style.transform = translateStyle;
+      this.background.style.transform = translateStyle;
     }
   }
 
   render() {
     return (
       <div>
-        <Background className={this.props.className} ref={background => { this.background = background; }} />
+        <div className={this.props.className} ref={div => { this.background = div; }} />
+        <div ref={div => { this.content = div; }}>
           {this.props.children}
+        </div>
       </div>
     );
   }
