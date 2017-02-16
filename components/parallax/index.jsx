@@ -5,6 +5,7 @@ export default class Parallax extends Component {
   static propTypes = {
     speedDivision: PropTypes.number,
     backgroundStyle: PropTypes.object,
+    children: PropTypes.node,
   };
 
   constructor(props) {
@@ -23,6 +24,7 @@ export default class Parallax extends Component {
     Object.keys(this.state.backgroundStyle).forEach((key) => {
       this.background.style[key] = this.state.backgroundStyle[key];
     });
+
     this.content.style.position = 'absolute';
     this.content.style.left = 0;
     this.content.style.right = 0;
@@ -42,11 +44,9 @@ export default class Parallax extends Component {
 
   render() {
     return (
-      <div>
-        <div className={this.props.className} ref={div => { this.background = div; }} />
-        <div ref={div => { this.content = div; }}>
-          {this.props.children}
-        </div>
+      <div ref={div => { this.root = div; }} >
+        <div ref={div => { this.background = div; }} />
+        <div ref={div => { this.content = div; }} />
       </div>
     );
   }
