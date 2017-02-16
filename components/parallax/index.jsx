@@ -1,9 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 
+function calculateTranslation(value) {
+  return (window.scrollY / value > 0) ? (window.scrollY / value) : 0;
+}
+
 export default class Parallax extends Component {
 
   static propTypes = {
-    speedDivision: PropTypes.number,
+    backgroundSpeedDivision: PropTypes.number,
+    contentSpeedDivision: PropTypes.number,
     backgroundStyle: PropTypes.object,
     children: PropTypes.node,
   };
@@ -11,7 +16,8 @@ export default class Parallax extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      speedDivision: props.speedDivision || 4,
+      backgroundSpeedDivision: props.backgroundSpeedDivision || 4,
+      contentSpeedDivision: props.contentSpeedDivision || 3,
       backgroundStyle: props.backgroundStyle || '',
     };
   }
@@ -24,7 +30,6 @@ export default class Parallax extends Component {
     Object.keys(this.state.backgroundStyle).forEach((key) => {
       this.background.style[key] = this.state.backgroundStyle[key];
     });
-
     this.content.style.position = 'absolute';
     this.content.style.left = 0;
     this.content.style.right = 0;
@@ -35,19 +40,31 @@ export default class Parallax extends Component {
   }
 
   calcTranslation() {
-    const translationValue = (window.scrollY / this.state.speedDivision > 0) ? (window.scrollY / this.state.speedDivision) : 0;
-    const translateStyle = `translate3d(0px,${translationValue}px, 0px)`;
+    const backgroundTranslationValue = calculateTranslation(this.state.backgroundSpeedDivision);
+    const backgroundTranslateStyle = `translate3d(0px,${backgroundTranslationValue}px, 0px)`;
+    const contentTranslationValue = calculateTranslation(this.state.contentSpeedDivision);
+    const contentTranslationStyle = `translate3d(0px,${contentTranslationValue}px, 0px)`;
+
     if (this.background) {
-      this.background.style.transform = translateStyle;
+      this.background.style.transform = backgroundTranslateStyle;
+    }
+
+    if (this.content) {
+      this.content.style.transform = contentTranslationStyle;
     }
   }
 
   render() {
     return (
-      <div ref={div => { this.root = div; }} >
-        <div ref={div => { this.background = div; }} />
-        <div ref={div => { this.content = div; }} />
+      <div>
+        <div ref={div => { this.background = div; }}>
+          <div ref={div => { this.content = div; }}>
+            {this.props.children}
+          </div>
+        </div>
       </div>
     );
   }
 }
+
+
