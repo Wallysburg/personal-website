@@ -17,7 +17,7 @@ export default class Parallax extends Component {
     super(props);
     this.state = {
       backgroundSpeedDivision: props.backgroundSpeedDivision || 4,
-      contentSpeedDivision: props.contentSpeedDivision || 3,
+      contentSpeedDivision: props.contentSpeedDivision || 6,
       backgroundStyle: props.backgroundStyle || '',
     };
   }
@@ -25,14 +25,14 @@ export default class Parallax extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.calcTranslation.bind(this), 10);
 
-    this.background.setAttribute('style', 'width: 100%; top: 0; bottom: 0; background-size: cover ;background-position: 50% 0; background-repeat: no-repeat;');
+    this.background.setAttribute('style', 'width: 100%; top: 0; bottom: 0; background-size: contain ;background-position: 50% 0; background-repeat: no-repeat;');
 
     Object.keys(this.state.backgroundStyle).forEach((key) => {
       this.background.style[key] = this.state.backgroundStyle[key];
     });
-    this.content.style.position = 'absolute';
-    this.content.style.left = 0;
-    this.content.style.right = 0;
+    // this.content.style.position = 'absolute';
+    // this.content.style.left = 0;
+    // this.content.style.right = 0;
   }
 
   componenetWillUnmount() {
@@ -46,7 +46,7 @@ export default class Parallax extends Component {
     const contentTranslationStyle = `translate3d(0px,${contentTranslationValue}px, 0px)`;
 
     if (this.background) {
-      this.background.style.transform = backgroundTranslateStyle;
+      // this.background.style.transform = backgroundTranslateStyle;
     }
 
     if (this.content) {
@@ -56,13 +56,11 @@ export default class Parallax extends Component {
 
   render() {
     return (
-      <div>
         <div ref={div => { this.background = div; }}>
           <div ref={div => { this.content = div; }}>
             {this.props.children}
           </div>
         </div>
-      </div>
     );
   }
 }
