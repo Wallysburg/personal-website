@@ -25,9 +25,6 @@ export default class Header extends Component {
             <h1 className={styles.title}>
               <Link to={prefixLink('/blog/')}>Blog</Link>
             </h1>
-            <h1 className={styles.title}>
-              <Link to={prefixLink('/music/')}>Music </Link>
-            </h1>
           </div>
           <div className={styles.icon}>
             <IndexLink to={prefixLink('/')}>
