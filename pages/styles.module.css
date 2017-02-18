@@ -3,8 +3,10 @@
 .page {
   padding-top: var(--headerHeight);
   min-height: 100vh;
-  background: url('assets/img/background-min.jpg');
+  background: url('assets/img/background-min.jpg'), url(http://wallpapercave.com/wp/PWPdLDZ.jpg);
   background-size: cover;
+  background-color: grey;
+  background-blend-mode: screen, multiply;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
@@ -15,7 +17,7 @@
 }
 
 .intro h1 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
   font-size: 3.95rem;
   text-align: center;
   position: absolute;
