@@ -8,6 +8,8 @@ import 'assets/css/document.css';
 import 'assets/css/typography.css';
 
 export default class Template extends Component {
+
+
   static propTypes = {
     children: PropTypes.node,
     location: PropTypes.object,
@@ -23,6 +25,7 @@ export default class Template extends Component {
       location: this.props.location,
     };
   }
+
 
   render() {
     return (

@@ -13,6 +13,9 @@ export default class ParallaxContainer extends Component {
   }
 
   render() {
+    console.log(React.Children.toArray(this.props.children));
+
+    console.log(this.props.children);
     const parallaxContainterStyle = {
       perspective: '1px',
       height: '100%',

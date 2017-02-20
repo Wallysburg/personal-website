@@ -12,7 +12,7 @@ import styles from './styles.module.css';
 export default class Header extends Component {
   render() {
     return (
-      <Headroom wrapperStyle={{ position: 'fixed' }}>
+      <Headroom wrapperStyle={{ zIndex: 5, position: 'fixed' }}>
       <div className={styles.header}>
         <Wrapper>
           <div className={styles.navMenu}>

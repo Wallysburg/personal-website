@@ -19,7 +19,7 @@ export default class ParallaxGroup extends Component {
     const parallaxGroupStyle = {
       position: 'relative',
       height: this.props.height,
-      'transform-style': 'preserve-3d',
+      transformStyle: 'preserve-3d',
     };
 
     return (

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { prefixLink } from 'gatsby-helpers';
 import Particles from 'react-particles-js';
+import { particlesConfig } from 'data/particles.json';
 
 import Fullscreen from 'components/fullscreen';
 import Meta from 'components/meta';
 import { Link } from 'react-router';
 
 import styles from './styles.module.css';
-import { particlesConfig } from 'data/particles.json';
 
 export default class Index extends Component {
   render() {

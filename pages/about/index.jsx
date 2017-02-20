@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { prefixLink } from 'gatsby-helpers';
-import { ParallaxBackground, ParallaxContainer, ParallaxLayer } from 'components/react-parallax-utilities';
+import { ParallaxBackground, ParallaxContainer, ParallaxGroup } from 'components/react-parallax-utilities';
 
 
 import ContentPage from 'components/content-page';
@@ -16,17 +16,10 @@ export default class About extends Component {
   render() {
     return (
       <page>
-                <ParallaxContainer>
-
         <ContentPage>
           <Meta title="About" />
-
           <Wrapper className={styles.pageSection}>
-            <ParallaxLayer>
-
             <h2>About Me</h2>
-          </ParallaxLayer>
-
             <section className={styles.aboutContainer}>
               <div className={styles.aboutText}>
                 <p>I’m a web/node/javascript developer currently situated in Tampa, Florida.</p>
@@ -34,17 +27,13 @@ export default class About extends Component {
                 <p>I currently work at <OutboundLink to="http://accusoft.com/"> Accusoft </OutboundLink> where I am a developer on our <OutboundLink to="https://www.accusoft.com/products/prizmdoc/overview/"> PrizmDoc </OutboundLink>  product Line. If you'd like to get in touch, <Link to={prefixLink('/contact/')}>shoot me a message</Link>.</p>
               </div>
             </section>
-
           </Wrapper>
-
-
         </ContentPage>
-            </ParallaxContainer>
-
         <ContentPage className={styles.page}>
           <Meta title="About" />
-            <Wrapper className={styles.pageSection}>
-                        <ParallaxBackground>
+          <ParallaxGroup>
+          <Wrapper className={styles.pageSection}>
+            <ParallaxBackground scrollDirection={'up'} contentSpeedDivision={13}>
 
               <section className={styles.technicalSkills}>
                 <h2>Skills</h2>
@@ -66,9 +55,10 @@ export default class About extends Component {
                   </div>
                 </section>
               </section>
-                        </ParallaxBackground>
+            </ParallaxBackground>
 
-            </Wrapper>
+          </Wrapper>
+          </ParallaxGroup>
 
         </ContentPage>
         <ContentPage className={styles.page}>

@@ -3,10 +3,8 @@
 .page {
   padding-top: var(--headerHeight);
   min-height: 100vh;
-  background: url('assets/img/background-min.jpg'), url(http://wallpapercave.com/wp/PWPdLDZ.jpg);
+  background: url('assets/img/background-min.jpg');
   background-size: cover;
-  background-color: grey;
-  background-blend-mode: screen, multiply;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }

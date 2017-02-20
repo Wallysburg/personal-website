@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ParallaxBackground from 'components/parallax-background';
+import { ParallaxBackground, ParallaxContainer, ParallaxLayer } from 'components/react-parallax-utilities';
 
 import styles from './styles.module.css';
 

@@ -1,5 +1,6 @@
 .blog-post {
 	margin-bottom: 30px;
+	border: 1px black;
 }
 
 .blog-post:last-child {
